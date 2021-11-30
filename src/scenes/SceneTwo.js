@@ -3,6 +3,7 @@ import christianImg from '../assets/ChristianGB.png'
 import treeImg from '../assets/TreePresents.png'
 import rasmusImg from '../assets/RasmusII.png'
 import theaImg from '../assets/Thea.png'
+// import bgImg from '../assets/background, big tiles.png'
 
 
 export default class SceneTwo extends Phaser.Scene {
@@ -12,7 +13,7 @@ export default class SceneTwo extends Phaser.Scene {
       }
 
       preload() {
-         // this.load.image('man', manImg)
+         this.load.image('bg', '../assets/backgroundBig.png');
          this.load.spritesheet('christian-ani', christianImg,  {frameWidth: 110, frameHeight: 150})
          this.load.spritesheet('tree-ani', treeImg, {frameWidth: 208, frameHeight: 364})
          this.load.spritesheet('rasmus-ani', rasmusImg, {frameWidth: 110, frameHeight: 150})
@@ -20,7 +21,7 @@ export default class SceneTwo extends Phaser.Scene {
       }
 
       create() {
-         // this.add.image(400, 300, 'man')
+         this.add.image(100, 100, 'bg')
          this.christianImg = this.add.sprite(100, 300, 'christian-ani')
          this.treeImg = this.add.sprite(600, 500, 'tree-ani')
          this.rasmusImg = this.add.sprite(800, 450, 'rasmus-ani')
