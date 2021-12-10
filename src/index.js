@@ -7,10 +7,9 @@ const config = {
     parent: 'phaser-example',
     width: 1200,
     height: 800,
-    scene:  [GreetScene, SceneTwo]
+    scene:  [GreetScene, SceneTwo],
+    pixelArt: true,
 };
 
-// export default new Phaser.Game(config);
-// const game = new Phaser.Game(config);
 const game = new Phaser.Game(config);
 
