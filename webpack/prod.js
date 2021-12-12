@@ -2,6 +2,7 @@ const merge = require("webpack-merge");
 const path = require("path");
 const base = require("./base");
 const TerserPlugin = require("terser-webpack-plugin");
+// const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = merge(base, {
   mode: "production",
@@ -24,12 +25,21 @@ module.exports = merge(base, {
         }
       })
     ]
-  },
-  plugins: [
-     new CopyPlugin({
-        patterns: [
-           { from: './src/assets', to: 'src/assets'},
-        ]
-     })
-  ]
+ }//,
+//   plugins: [
+//    new CopyPlugin({ 
+//       patterns: [
+//          { 
+//              // src/index.html
+//              from: 'index.html',
+//              context: 'src/'
+//          },
+//          {
+//              // every file inside src/assets folder
+//              from: 'assets/*',
+//              context: 'src/'
+//          }
+//      ]
+//    }),
+// ],
 });

@@ -8,10 +8,7 @@ export default class GreetScene extends Phaser.Scene {
    }
 
    preload() {
-      // this.load.spritesheet('btnAni', btnSprite, {frameWidth: 54*3, frameHeight: 30*3})
       this.load.spritesheet('legoBtn-anim', legoBtn, {frameWidth: 216, frameHeight: 132});
-      // this.load.bitmapFont('dogicapixel', 'src/assets/fonts/dogicapixel.ttf'); //bruges ikke endnu
-      this.load.script('webfont', 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js');  //on hold
       this.load.bitmapFont('gbfont', 'src/assets/fonts/gbfont.png', 'src/assets/fonts/gbfont.xml');
    }
 
