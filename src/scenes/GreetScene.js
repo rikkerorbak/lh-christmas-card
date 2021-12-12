@@ -1,5 +1,7 @@
 import Phaser from 'phaser'
 import legoBtn from '../assets/LegoBtnSprite.png'
+import fontPng from  '../assets/fonts/gbfont.png'
+import fontXml from '../assets/fonts/gbfont.xml'
 
 export default class GreetScene extends Phaser.Scene {
 
@@ -9,12 +11,11 @@ export default class GreetScene extends Phaser.Scene {
 
    preload() {
       this.load.spritesheet('legoBtn-anim', legoBtn, {frameWidth: 216, frameHeight: 132});
-      this.load.bitmapFont('gbfont', 'src/assets/fonts/gbfont.png', 'src/assets/fonts/gbfont.xml');
+      // this.load.bitmapFont('gbfont', 'src/assets/fonts/gbfont.png', 'src/assets/fonts/gbfont.xml');
+      this.load.bitmapFont('gbfont', fontPng, fontXml)
    }
 
    create() {
-
-
       this.label = this.add.bitmapText(200, 150, 'gbfont', '')
       this.typewriteText('The following message is\nbrought to you by')
       this.btn = this.add.sprite(600, 450, 'legoBtn-anim')
@@ -37,7 +38,6 @@ export default class GreetScene extends Phaser.Scene {
       this.cameras.main.once(Phaser.Cameras.Scene2D.Events.FADE_OUT_COMPLETE, (cam, effect) => {
          this.scene.start('scene-two')
       })
-
 
    }
 
